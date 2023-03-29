@@ -20,3 +20,14 @@ function changeText() {
 btn.addEventListener("click", buttonPressed, {once: true});
 btn.addEventListener("click", changeBGPink, {once: true});
 btn.addEventListener("click", changeText);
+
+// find the div
+const btnContainer = document.querySelector(".button-container")
+// define changeBGGreen function
+function changeBGGreen(event) {
+    if (event.target.tagName === "BUTTON") {
+        event.target.classList.add("greenBG");
+    }
+}
+// Add the func as event listener
+btnContainer.addEventListener("click", changeBGGreen);
